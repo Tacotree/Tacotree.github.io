@@ -5,7 +5,6 @@
 }
 
 html {
-  scroll-snap-type: y proximity;
   scroll-behavior: smooth;
 }
 
@@ -17,22 +16,15 @@ body {
   line-height: 1.6;
 }
 
-.ruutu {
-  position: relative;
-  min-height: 100vh;
-  min-height: 100dvh;
-  height: 100vh;
-  height: 100dvh;
-  scroll-snap-align: start;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 2rem;
+.header {
+  padding: 3rem 2rem 1rem;
+  max-width: 48rem;
+  margin: 0 auto;
 }
 
 .yla {
-  margin: 0 0 0.75rem;
-  font-size: 0.85rem;
+  margin: 0 0 0.5rem;
+  font-size: 0.8rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: #9aa4b2;
@@ -40,105 +32,161 @@ body {
 
 h1 {
   margin: 0;
-  font-size: clamp(2.4rem, 8vw, 5.5rem);
+  font-size: clamp(2rem, 6vw, 3.5rem);
   font-weight: 600;
-  letter-spacing: -0.04em;
-  line-height: 1.05;
+  letter-spacing: -0.03em;
 }
 
 .ala {
-  margin: 1rem 0 0;
+  margin: 0.5rem 0 0;
+  color: #c5ccd6;
+}
+
+.toc {
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 1rem 2rem 2rem;
+}
+
+.toc h2 {
+  margin: 0 0 0.75rem;
   font-size: 1.1rem;
+}
+
+.toc a {
   color: #c5ccd6;
-}
-
-h2 {
-  margin: 0;
-  max-width: 18ch;
-  font-size: clamp(1.8rem, 5vw, 3.2rem);
-  font-weight: 600;
-  letter-spacing: -0.03em;
-  line-height: 1.15;
-}
-
-.teksti {
-  margin: 1.25rem 0 0;
-  max-width: 36rem;
-  color: #c5ccd6;
-}
-
-.rullaa {
-  position: absolute;
-  left: 2rem;
-  bottom: 2rem;
-  color: #9aa4b2;
   text-decoration: none;
-  font-size: 0.85rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
 }
 
-.rullaa:hover,
-.rullaa:focus {
+.toc a:hover,
+.toc a:focus {
   color: #f5f7fa;
 }
 
-.taidot {
-  margin: 1.5rem 0 0;
-  padding: 0;
+.toc > ol {
   list-style: none;
-  color: #c5ccd6;
+  padding-left: 0;
+  margin: 0;
 }
 
-.taidot li {
-  padding: 0.55rem 0;
-  border-bottom: 1px solid #1e2630;
-  max-width: 24rem;
-}
-.kortti {
-  margin-top: 1.5rem;
-  max-width: 36rem;
+.toc > ol > li {
+  margin: 1rem 0;
 }
 
-.kortti h3 {
-  margin: 0 0 0.35rem;
-  font-size: 1.15rem;
+.toc ol ol {
+  list-style: none;
+  padding-left: 1.4rem;
+  margin: 0.3rem 0 0;
+}
+
+.osio {
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 2rem;
+  border-top: 1px solid #1e2630;
+}
+
+.tehtava {
+  margin: 2rem 0;
+}
+
+.tehtava h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.25rem;
+}
+
+.tehtava h4 {
+  margin: 1.5rem 0 0.4rem;
+  font-size: 1rem;
   font-weight: 600;
+  color: #e8eaed;
 }
 
-.kortti p {
+.tehtava p {
   margin: 0;
   color: #c5ccd6;
 }
 
-.taidot a {
-  color: #f5f7fa;
-  text-decoration: none;
+.tehtava img {
+  max-width: 100%;
+  height: auto;
+  margin: 1rem 0;
+  border-radius: 6px;
 }
 
-.taidot a:hover,
-.taidot a:focus {
+footer {
+  text-align: center;
+  padding: 3rem 1rem;
   color: #9aa4b2;
+  font-size: 0.85rem;
 }
-.valikko {
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 10;
+.pohja {
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.pohja h2 {
+  margin: 0 0 1rem;
+  font-size: 1.3rem;
+}
+
+.pohja h3 {
+  margin: 1.5rem 0 0.4rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.pohja p {
+  margin: 0;
+  color: #c5ccd6;
+}
+.karuselli {
+  position: relative;
+  max-width: 100%;
+  margin: 1.5rem 0;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #161b22;
+}
+
+.karuselli-sisalto {
   display: flex;
-  gap: 1.25rem;
-  padding: 1.25rem 2rem;
+  transition: transform 0.4s ease;
 }
 
-.valikko a {
-  color: #9aa4b2;
-  text-decoration: none;
-  font-size: 0.8rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+.karuselli-sisalto img {
+  min-width: 100%;
+  height: auto;
+  object-fit: contain;
+  background: #111;
 }
 
-.valikko a:hover,
-.valikko a:focus {
-  color: #f5f7fa;
+.karuselli-nappi {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.karuselli-nappi:hover,
+.karuselli-nappi:focus {
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.karuselli-nappi.vasen {
+  left: 0.5rem;
+}
+.karuselli-nappi.oikea {
+  right: 0.5rem;
 }
