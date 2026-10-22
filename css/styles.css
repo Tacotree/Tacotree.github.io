@@ -1,0 +1,251 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  background: #0b0f14;
+  color: #f5f7fa;
+  line-height: 1.6;
+}
+
+.header {
+  padding: 3rem 2rem 1rem;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.yla {
+  margin: 0 0 0.5rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #9aa4b2;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+.ala {
+  margin: 0.5rem 0 0;
+  color: #c5ccd6;
+}
+
+.toc {
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 1rem 2rem 2rem;
+}
+
+.toc h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.1rem;
+}
+
+.toc a {
+  color: #c5ccd6;
+  text-decoration: none;
+}
+
+.toc a:hover,
+.toc a:focus {
+  color: #f5f7fa;
+}
+
+.toc > ol {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.toc > ol > li {
+  margin: 1rem 0;
+}
+
+.toc ol ol {
+  list-style: none;
+  padding-left: 1.4rem;
+  margin: 0.3rem 0 0;
+}
+
+.osio {
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 2rem;
+  border-top: 1px solid #1e2630;
+}
+
+.tehtava {
+  margin: 2rem 0;
+}
+
+.tehtava h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.25rem;
+}
+
+.tehtava h4 {
+  margin: 1.5rem 0 0.4rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #e8eaed;
+}
+
+.tehtava p {
+  margin: 0;
+  color: #c5ccd6;
+}
+
+.tehtava img {
+  max-width: 100%;
+  height: auto;
+  margin: 1rem 0;
+  border-radius: 6px;
+}
+
+footer {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #9aa4b2;
+  font-size: 0.85rem;
+}
+.pohja {
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.pohja h2 {
+  margin: 0 0 1rem;
+  font-size: 1.3rem;
+}
+
+.pohja h3 {
+  margin: 1.5rem 0 0.4rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.pohja p {
+  margin: 0;
+  color: #c5ccd6;
+}
+.karuselli {
+  position: relative;
+  max-width: 100%;
+  margin: 1.5rem 0;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #161b22;
+}
+
+.karuselli-sisalto {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.karuselli-sisalto img {
+  min-width: 100%;
+  height: auto;
+  object-fit: contain;
+  background: #111;
+}
+
+.karuselli-nappi {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.karuselli-nappi:hover,
+.karuselli-nappi:focus {
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.karuselli-nappi.vasen {
+  left: 0.5rem;
+}
+.karuselli-nappi.oikea {
+  right: 0.5rem;
+}
+
+.tiivistys {
+  margin: 1rem 0 0;
+  padding: 0.75rem 1rem;
+  border-left: 3px solid #4caf50;
+  background: #121821;
+  color: #e8eaed;
+  font-style: italic;
+  border-radius: 0 6px 6px 0;
+}
+
+.karuselli-sisalto img {
+  margin: 0;
+  border-radius: 0;
+}
+
+.karuselli-laskuri {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.75rem;
+  padding: 0.1rem 0.5rem;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 0.8rem;
+  border-radius: 4px;
+}
+
+.palautteet {
+  list-style: none;
+  margin: 1rem 0;
+  padding: 0;
+}
+
+.palautteet li {
+  margin-bottom: 0.75rem;
+  padding: 0.6rem 1rem;
+  border-left: 3px solid #4caf50;
+  background: #121821;
+  color: #9aa4b2;
+  font-size: 0.9rem;
+  border-radius: 0 6px 6px 0;
+}
+
+.palautteet span {
+  display: block;
+  color: #e8eaed;
+  font-style: italic;
+  margin-bottom: 0.2rem;
+}
+
+.huomautus {
+  margin: 1.25rem 0 0;
+  padding: 0.75rem 1rem;
+  border-left: 3px solid #9aa4b2;
+  background: #121821;
+  color: #9aa4b2;
+  font-size: 0.85rem;
+  border-radius: 0 6px 6px 0;
+}
