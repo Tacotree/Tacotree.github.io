@@ -249,3 +249,10 @@ footer {
   font-size: 0.85rem;
   border-radius: 0 6px 6px 0;
 }
+.huomautus + .huomautus {
+  margin-top: 0.75rem;
+}
+
+.huomautus strong {
+  color: #c5ccd6;
+}
