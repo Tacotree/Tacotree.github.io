@@ -256,3 +256,56 @@ footer {
 .huomautus strong {
   color: #c5ccd6;
 }
+
+/* ===== Evästebanneri ===== */
+.evastebanneri {
+  position: fixed;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 1rem 1.25rem;
+  background: #121821;
+  border: 1px solid #1e2630;
+  border-left: 3px solid #9aa4b2;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+}
+
+.evastebanneri p {
+  margin: 0 0 0.75rem;
+  color: #c5ccd6;
+  font-size: 0.9rem;
+}
+
+.evastebanneri a {
+  color: #f5f7fa;
+}
+
+.evastebanneri-napit {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.evastenappi {
+  min-width: 7rem;
+  padding: 0.5rem 1.25rem;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #f5f7fa;
+  background: #1e2630;
+  border: 1px solid #9aa4b2;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.evastenappi:hover,
+.evastenappi:focus-visible {
+  background: #2a3440;
+  border-color: #f5f7fa;
+}
