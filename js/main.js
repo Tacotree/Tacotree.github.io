@@ -46,7 +46,7 @@ function tallennaSuostumus(arvo) {
   }
 }
 
-// Googlen antama GTM-koodi, ajetaan vain suostumuksen jälkeen
+// GTM-koodi, ajetaan vain suostumuksen jälkeen
 function lataaGTM() {
   if (window.gtmLadattu) return;
   window.gtmLadattu = true;
