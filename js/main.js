@@ -131,6 +131,10 @@ document.querySelectorAll('.evasteasetukset-linkki').forEach((linkki) => {
 const suostumus = lueSuostumus();
 if (suostumus === 'hyvaksytty') {
   lataaGTM();
-} else if (suostumus !== 'hylatty') {
-  naytaBanneri();
+} else {
+  // Siivotaan mahdolliset jäänteet, jos suostumusta ei ole
+  poistaAnalytiikkaevasteet();
+  if (suostumus !== 'hylatty') {
+    naytaBanneri();
+  }
 }
