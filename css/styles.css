@@ -309,3 +309,35 @@ footer {
   background: #2a3440;
   border-color: #f5f7fa;
 }
+
+/* ===== Footer-linkit ja tietosuojasivu ===== */
+footer a,
+.takaisin {
+  color: #c5ccd6;
+}
+
+footer a:hover,
+footer a:focus,
+.takaisin:hover,
+.takaisin:focus {
+  color: #f5f7fa;
+}
+
+.seloste p + p,
+.seloste ul + p {
+  margin-top: 0.75rem;
+}
+
+.seloste ul {
+  margin: 0.5rem 0 0;
+  padding-left: 1.25rem;
+  color: #c5ccd6;
+}
+
+.seloste li {
+  margin-bottom: 0.4rem;
+}
+
+.seloste a {
+  color: #f5f7fa;
+}
