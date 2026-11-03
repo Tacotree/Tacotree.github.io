@@ -119,7 +119,7 @@ function naytaBanneri() {
   document.body.appendChild(banneri);
 }
 
-// "Evästeasetukset"-linkki footerissa (lisätään vaiheessa 4)
+// "Evästeasetukset"-linkki footerissa
 document.querySelectorAll('.evasteasetukset-linkki').forEach((linkki) => {
   linkki.addEventListener('click', (tapahtuma) => {
     tapahtuma.preventDefault();
